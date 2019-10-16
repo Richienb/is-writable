@@ -1,7 +1,7 @@
 {
-    "name": "the-module",
+    "name": "is-writable",
     "version": "0.0.0",
-    "description": "My awesome module.",
+    "description": "Check if a file or directory is writable.",
     "repository": "https://github.com/Richienb/node-module-boilerplate.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
     "license": "MIT",
@@ -17,7 +17,10 @@
         "test": "yarn lint && ava"
     },
     "keywords": [],
-    "dependencies": {},
+    "dependencies": {
+        "bluebird": "^3.7.1",
+        "fs-extra": "^8.1.0"
+    },
     "devDependencies": {
         "ava": "^2.1.0",
         "eslint": "^6.5.1",

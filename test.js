@@ -1,13 +1,7 @@
 import test from "ava"
-import theModule from "."
+import isWritable from "."
 
 test("main", (t) => {
-    t.throws(() => {
-        theModule(123)
-    }, {
-        instanceOf: TypeError,
-        message: "Expected a string, got number",
-    })
-
-    t.is(theModule("unicorns"), "unicorns & rainbows")
+    t.true(isWritable.sync(__dirname))
+    isWritable.async(__dirname).then(t.true)
 })

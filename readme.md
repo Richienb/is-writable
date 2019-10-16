@@ -1,22 +1,21 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# is-writable [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/is-writable)
 
-My awesome module.
+Check if a file or directory is writable.
 
 [![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install is-writable
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const isWritable = require("is-writable");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+isWritable.sync(directory);
 ```
 
 ## API

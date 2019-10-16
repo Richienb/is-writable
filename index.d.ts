@@ -1,14 +1,17 @@
-/**
- * My awesome module.
- * @param input Lorem ipsum.
- * @param postfix Lorem ipsum.
- * @example
- * ```
- * const theModule = require("the-module");
- * theModule("unicorns");
- * //=> 'unicorns & rainbows'
- * ```
-*/
-declare function theModule(input: string, { postfix }: { postfix?: string }): string;
+declare const isWritable: {
+    /**
+    * Syncronously check if a directory is writable.
+    * @param directory The directory to check.
+    * @param mode The fs constant directing the mode to use.
+    */
+    sync(directory: string, mode?: any): boolean
 
-export = theModule;
+    /**
+    * Asyncronously check if a directory is writable.
+    * @param directory The directory to check.
+    * @param mode The fs constant directing the mode to use.
+    */
+    async(directory: string, mode?: any): Promise<boolean>
+}
+
+export = isWritable;

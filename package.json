@@ -1,6 +1,6 @@
 {
     "name": "is-writable",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "Check if a file or directory is writable.",
     "repository": "https://github.com/Richienb/node-module-boilerplate.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",

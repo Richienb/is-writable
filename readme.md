@@ -1,8 +1,8 @@
-# is-writable [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/is-writable)
+# is-writable [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/is-writable/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/is-writable)
 
 Check if a file or directory is writable.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/is-writable.png)](https://npmjs.com/package/is-writable)
 
 ## Install
 
@@ -15,26 +15,25 @@ npm install is-writable
 ```js
 const isWritable = require("is-writable");
 
-isWritable.sync(directory);
+const writable = isWritable.sync(directory);
+console.log(writable); // true
+
+isWritable.async(directory).then(writable => console.log(writable)); // true
 ```
 
 ## API
 
-### theModule(input, options?)
+### isWritable.[sync|async](directory, mode?)
 
-#### input
+#### directory
 
 Type: `string`
 
-Lorem ipsum.
+The directory to check.
 
-#### options
+#### mode
 
-Type: `object`
+Type: _from `fs.constants`_\
+Default: `fs.constants.W_OK`
 
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The fs constant directing the mode to use.

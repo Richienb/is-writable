@@ -1,6 +1,6 @@
 {
     "name": "is-writable",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Check if a file or directory is writable.",
     "repository": "https://github.com/Richienb/is-writable.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",

@@ -2,15 +2,16 @@
     "name": "is-writable",
     "version": "1.0.0",
     "description": "Check if a file or directory is writable.",
-    "repository": "https://github.com/Richienb/node-module-boilerplate.git",
+    "repository": "https://github.com/Richienb/is-writable.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
     "license": "MIT",
     "main": "index.js",
     "files": [
-        "index.js"
+        "index.js",
+        "index.d.ts"
     ],
     "engines": {
-        "node": ">=8"
+        "node": ">=6.4.0"
     },
     "scripts": {
         "lint": "eslint .",
@@ -24,7 +25,7 @@
     "devDependencies": {
         "ava": "^2.1.0",
         "eslint": "^6.5.1",
-        "eslint-config-richienb": "^0.1.2"
+        "eslint-config-richienb": "^0.2.0"
     },
     "eslintConfig": {
         "extends": "richienb/node"

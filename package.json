@@ -1,33 +1,41 @@
 {
-    "name": "is-writable",
-    "version": "1.0.1",
-    "description": "Check if a file or directory is writable.",
-    "repository": "https://github.com/Richienb/is-writable.git",
-    "author": "Richie Bendall <richiebendall@gmail.com>",
-    "license": "MIT",
-    "main": "index.js",
-    "files": [
-        "index.js",
-        "index.d.ts"
-    ],
-    "engines": {
-        "node": ">=6.4.0"
-    },
-    "scripts": {
-        "lint": "eslint .",
-        "test": "yarn lint && ava"
-    },
-    "keywords": [],
-    "dependencies": {
-        "bluebird": "^3.7.1",
-        "fs-extra": "^8.1.0"
-    },
-    "devDependencies": {
-        "ava": "^2.1.0",
-        "eslint": "^6.5.1",
-        "eslint-config-richienb": "^0.2.0"
-    },
-    "eslintConfig": {
-        "extends": "richienb/node"
-    }
+	"name": "is-writable",
+	"version": "1.0.1",
+	"description": "Check if a file or directory is writable.",
+	"repository": "https://github.com/Richienb/is-writable.git",
+	"author": "Richie Bendall <richiebendall@gmail.com>",
+	"license": "MIT",
+	"main": "index.js",
+	"files": [
+		"index.js",
+		"index.d.ts"
+	],
+	"engines": {
+		"node": ">=10"
+	},
+	"scripts": {
+		"lint": "xo",
+		"test": "yarn lint && ava"
+	},
+	"keywords": [
+		"writable",
+		"access",
+		"filesystem",
+		"file",
+		"directory",
+		"path",
+		"filename"
+	],
+	"dependencies": {},
+	"devDependencies": {
+		"ava": "^3.4.0",
+		"eslint-config-richienb": "^0.3.0",
+		"xo": "^0.27.2"
+	},
+	"resolutions": {
+		"eslint": "^6.8.0"
+	},
+	"xo": {
+		"extends": "richienb/node"
+	}
 }

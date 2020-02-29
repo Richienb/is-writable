@@ -1,4 +1,4 @@
-# is-writable [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/is-writable/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/is-writable)
+# Is Writable [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/is-writable/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/is-writable)
 
 Check if a file or directory is writable.
 
@@ -15,25 +15,19 @@ npm install is-writable
 ```js
 const isWritable = require("is-writable");
 
-const writable = isWritable.sync(directory);
-console.log(writable); // true
-
-isWritable.async(directory).then(writable => console.log(writable)); // true
+(async () => {
+	await isWritable(directory)
+	//=> true
+})()
 ```
 
 ## API
 
-### isWritable.[sync|async](directory, mode?)
+### isWritable(filename)
+### isWritable.sync(filename)
 
-#### directory
+#### filename
 
 Type: `string`
 
-The directory to check.
-
-#### mode
-
-Type: _from `fs.constants`_\
-Default: `fs.constants.W_OK`
-
-The fs constant directing the mode to use.
+The file or directory to check.

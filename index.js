@@ -3,20 +3,20 @@
 const fs = require("fs")
 const mode = fs.constants.W_OK
 
-module.exports = async (filename) => {
+module.exports = async filename => {
 	try {
-		await fs.promises.access(filename, mode) // eslint-disable-line node/no-unsupported-features/node-builtins
+		await fs.promises.access(filename, mode)
 		return true
-	} catch (err) {
+	} catch (_) {
 		return false
 	}
 }
 
-module.exports.sync = (filename) => {
+module.exports.sync = filename => {
 	try {
 		fs.accessSync(filename, mode)
 		return true
-	} catch (err) {
+	} catch (_) {
 		return false
 	}
 }

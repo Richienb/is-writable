@@ -1,31 +1,31 @@
 declare const isWritable: {
 	/**
-	 * Asyncronously check if a directory is writable.
-	 * @param filename The directory to check.
-	 * @example
-	 * ```
-	 * const isWritable = require("is-writable");
-     *
-     * (async () => {
-     * 	await isWritable(directory)
-     * 	//=> true
-     * })()
-	 * ```
-	 */
-	(filename: string): Promise<boolean>
+	Asynchronously check if a directory is writable.
+	@param filepath The file or directory to check.
+	@example
+	```
+	const isWritable = require("is-writable");
 
-    /**
-    * Syncronously check if a directory is writable.
-    * @param filename The directory to check.
-	 * @example
-	 * ```
-	 * const isWritable = require("is-writable");
-     *
-	 * isWritable.sync(directory)
-	 * //=> true
-	 * ```
+    (async () => {
+    	await isWritable("file.txt");
+    	//=> true
+    })();
+	```
+	*/
+	(filepath: string): Promise<boolean>
+
+	/**
+    Synchronously check if a directory is writable.
+    @param filepath The file directory to check.
+	@example
+	```
+	const isWritable = require("is-writable");
+
+	isWritable.sync("directory");
+	//=> true
+	```
     */
-	sync(filename: string): boolean
+	sync(filepath: string): boolean
 }
 
 export = isWritable

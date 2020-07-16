@@ -11,11 +11,11 @@
 		"index.d.ts"
 	],
 	"engines": {
-		"node": ">=10"
+		"node": ">=10.17 <11 || >=11.14"
 	},
 	"scripts": {
 		"lint": "xo",
-		"test": "yarn lint && ava"
+		"test": "xo && ava"
 	},
 	"keywords": [
 		"writable",
@@ -28,14 +28,11 @@
 	],
 	"dependencies": {},
 	"devDependencies": {
-		"ava": "^3.4.0",
-		"eslint-config-richienb": "^0.3.0",
-		"xo": "^0.27.2"
-	},
-	"resolutions": {
-		"eslint": "^6.8.0"
+		"ava": "^3.10.1",
+		"eslint-config-richienb": "^0.4.2",
+		"xo": "^0.32.1"
 	},
 	"xo": {
-		"extends": "richienb/node"
+		"extends": "richienb"
 	}
 }

@@ -1,4 +1,4 @@
-# Is Writable [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/is-writable/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/is-writable)
+# is-writable [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/is-writable/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/is-writable)
 
 Check if a file or directory is writable.
 
@@ -16,17 +16,17 @@ npm install is-writable
 const isWritable = require("is-writable");
 
 (async () => {
-	await isWritable(directory)
+	await isWritable("file.txt")
 	//=> true
 })()
 ```
 
 ## API
 
-### isWritable(filename)
-### isWritable.sync(filename)
+### isWritable(filepath)
+### isWritable.sync(filepath)
 
-#### filename
+#### filepath
 
 Type: `string`
 
